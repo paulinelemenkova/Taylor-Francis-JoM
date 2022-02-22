@@ -34,7 +34,7 @@
 %------------------------------------------------------------------------------------------------------%
 \begin{document}
 
-\articletype{Science}% Specify the article type or omit as appropriate
+\articletype{Original Article - Science}% Specify the article type or omit as appropriate
 
 \title{Geophysical mapping of the Seychelles and the Somali Sea segment of the Indian Ocean using GMT scripting toolset}
 
@@ -46,7 +46,7 @@
 \maketitle
 
 \begin{abstract}
-Evaluation of the representative cartographic techniques demonstrated that there are still considerable challenges facing the methods of geophysical and bathymetric data visualisation. In an oceanic seafloor formation, the interaction between the geological structural elements and topographical relief can be analysed by advanced cartographic mapping. In present study, a Generic Mapping Tools (GMT) scripting toolset has been used to examine the sediment thickness, bathymetry, and geophysical variables, such as free-air gravity anomalies and geoid undulation continuum visualised on the high-resolution raster grids. The study area is located in the Seychelles region and the Somali Sea segment of the Indian Ocean. The dataset incorporates the satellite-derived gravity grid, EGM-2008, geological structures, topography GEBCO grid, GlobSed sediment thickness, processed by means of GMT scripts. The results demonstrated that for the sediment layer, a greater thickness is observed to be distributed along the coasts of Tanzania reaching up to 5,250 m, while central basin has generally low dominating values <1,000m. The sediment thickness over the Somali Sea has an asymmetric type of distribution oriented in  NE–SW direction. Western continental slope of Somalia is wide, gently declining to the seafloor at depths exceeding -5000 m; Kenya and Tanzania present a wide continental foot with depths ranging from -3500 to -5000 m. The Somali Sea basin shows low sedimentation with values lower than 500 m, ridges and island chains have higher sediment influx (1,000-2,000 m). The Mozambique Channel has dominating values at 2,500-3,500 m. Higher values are noted near the Reunion and Mauritius islands until the Seychelles via the Mascarene Plateau (500 -1,000 m) against the <500 m in the areas of the Mid-Indian Ridge, Carlsberg Ridge and an open water area. The correlation between the sediment thickness and topography, gravity anomalies, geoid undulations and transform faults are highlighted. The paper contributes to the geological studies of the Somali Sea and the Seychelles.
+Evaluation of the representative cartographic techniques demonstrated that there are still considerable challenges facing the methods of geophysical and bathymetric data visualisation. In an oceanic seafloor formation, the interaction between the geological structural elements and topographical relief can be analysed by advanced cartographic mapping. In present study, a correlation between several variables has been examined including the following ones: geological structure, coastal topography and bathymetry, geophysical fields, free-air gravity anomalies and geoid undulation, sediment thickness, bathymetric patterns, and extension of the transform faults. The variables, were visualised on the high-resolution raster grids using Generic Mapping Tools (GMT) scripting toolset. The study area is located in the Seychelles region and the Somali Sea segment of the Indian Ocean. The dataset incorporates the satellite-derived gravity grid, EGM-2008, geological structures, topography from GEBCO grid and GlobSed sediment thickness, processed by GMT scripts. The results demonstrated that western continental slope of Somalia is wide, gently declining to the seafloor at depths exceeding -5000 m. Kenya and Tanzania present a wide continental foot with depths ranging from -3500 to -5000 m. The Somali Sea basin shows low sedimentation lower than 500 m, while ridges and island chains have higher sediment influx (1,000-2,000 m). The Mozambique Channel has dominating values at 2,500-3,500 m. Higher values are noted near the Reunion and Mauritius islands until the Seychelles via the Mascarene Plateau (500 -1,000 m) against the <500 m in the areas of the Mid-Indian Ridge, Carlsberg Ridge and open water. 
 \end{abstract}
 
 \begin{keywords}
@@ -81,22 +81,20 @@ Future application of the present study and maps can include integration of the 
 
 \subsection{Regional Setting}
   
- At first, some details will be introduced about the regional settings of the presented study area, which is located on the Somali Sea basin and the Seychelles, NW part of the Indian Ocean Figure \ref{fig1}. The geographic location of this region can be brief characterised as follows. Its western part is presented by the Somali coasts which are known to be the longest national coastline (3025 km) in Africa with an estimated shelf area (up to -200 m) of 32 500 km2 \cite{CarboneAccordi}. The southern border is naturally formed by the group of the northern end of Madagascar, the Amiranta ridge and the northern part of the Mascarene ridge, the Comoro Islands, Mayotte and the Glorioso Islands, Figure \ref{fig1}. 
- 
- \begin{wrapfigure}{R}{0.5\textwidth}
+\begin{wrapfigure}{R}{0.5\textwidth}
 \centering
 	\includegraphics[width=7.5cm]{Fig-1.jpg}
 	\caption{Topographic map of the Somali Sea basin and the Seychelles. Mapping: GMT. Map source: author}
 \label{fig1}
 \end{wrapfigure}
     
+At first, some details will be introduced about the regional settings of the presented study area, which is located on the Somali Sea basin and the Seychelles, NW part of the Indian Ocean Figure \ref{fig1}. The geographic location of this region can be brief characterised as follows. Its western part is presented by the Somali coasts which are known to be the longest national coastline (3025 km) in Africa with an estimated shelf area (up to -200 m) of 32 500 km2 \cite{CarboneAccordi}. The southern border is naturally formed by the group of the northern end of Madagascar, the Amiranta ridge and the northern part of the Mascarene ridge, the Comoro Islands, Mayotte and the Glorioso Islands, Figure \ref{fig1}. 
+ 
 Distinct geomorphological features presented by the Horn of Africa \cite{Cashionetal2018} in the NW part of the Somali Sea. It stretches along the southern side of the Red Sea continuing its complex structure \cite{DaviesTramontini} where the system of faults controlled the trends of rifting. Further it extends into the Gulf of Aden, Somali Sea and a Guardafui Channel between the Socotra and the continent, the area generally known for fisheries \cite{SumailaBawumia}. The Seychelles Islands are situated midway between the coast of Africa and the Carlsberg Ridge (Figure \ref{fig1}) with an almost flat top of the bank \cite{MatthewsDavies}.
 
 The geology of the region is notable for complex setting, as reflected in previous studies on the geology of the Seychelles and the Somali Sea basin providing more detailes on this specific part of the west Indian Ocean \cite{KroenerSassi,Davisetal2016,Fantozzi,Koningetal1997,Lerouxetal2020}. The oldest portions of the Indian Ocean, which includes the study area of the Somali Sea and the Seychelles, were formed through the breakup of Gondwana and subsequent fragmentation of the East Gondwana \cite{Davisetal2016}. The northern part of the Somali Sea is bordered by a continental slope of the Horn of Africa forming a sharp ledge with the Socotra Island \cite{Boehnecke}. Morphologically, the Socotra island presents a fragment of the continental massif. Structurally, it forms a large uplifted structure in a continental platform being a part of the SE wing of the Arabian-Somali anteclise. It separated from the continental platform only in the Miocene. Former connections between the Socotra and the African continent is also proved by the presence of wadi on the island which present dry ephemeral riverbed valleys continuing the geomorphology from the Arabian Peninsula. 
 
 The geomorphology of the northern part of the Somali Sea was formed as a result of the collapse in the Gulf of Aden graben with a moderate spreading in the Aden-Sheba Ridge. The Somali margin is a magma-poor Iberian-type architecture comprising a stretched proximal domain that passes seaward where the lower crust is completely thinned \cite{Mortimeretal2020}. The slope overhang off the coast of Tanzania is associated with the horst uplifts of the sedimentary massifs of the Pemba, Zanzibar and Mafia islands (Tanzania). Minor troughs and grabens of the shelf and submarine margin of the continent are filled with sediments from Triassic to Jurassic \cite{McKenzieSclater1971,McKenzieSclater1973}.
-
-Upper layered suite becomes thinner when moving towards the centre of the Somali Sea basin. It also sharply reduced in thickness behind the sedimentary barriers of the blocky basement ridges oriented approximately parallel to the strike of the continental slope. This also points at the impacts of the geomorphic and geologic settings. The ca. 300 km long seamount chain in the Eastern Somali Basin stretching in a NE-SW direction, clearly seen in a quadrant between 50°-55°E and 3°-7°N (Figure \ref{fig1}). 
 
 \begin{wrapfigure}{R}{0.5\textwidth}
 \centering
@@ -104,6 +102,8 @@ Upper layered suite becomes thinner when moving towards the centre of the Somali
 	\caption{Geologic map of the Somali Sea basin and the Seychelles. Mapping: GMT. Map source: author}
 \label{fig2}
 \end{wrapfigure}
+
+Upper layered suite becomes thinner when moving towards the centre of the Somali Sea basin. It also sharply reduced in thickness behind the sedimentary barriers of the blocky basement ridges oriented approximately parallel to the strike of the continental slope. This also points at the impacts of the geomorphic and geologic settings. The ca. 300 km long seamount chain in the Eastern Somali Basin stretching in a NE-SW direction, clearly seen in a quadrant between 50°-55°E and 3°-7°N (Figure \ref{fig1}). 
 
 The seamounts have probably originated due to melting and upwelling of upper mantle heterogeneities in advance of migrating of paleo Carlsberg Ridge as a result of the geochemical and tectonic evolution of the Indian Ocean mantle \cite{MurtonRona,Sahaetal2020}. The main tectonic events throughout the SW Somali Sea include the strike-slip movements along vertical faults. The deformation is localised within a narrow belt that extends for more than a 100 km in a NE–SW direction. The near parallelism between the fold axes and fault orientation indicates a right-lateral movements.
 
@@ -158,7 +158,7 @@ The satellite-derived marine free-air gravity anomalies (Figure \ref{fig3}) are 
 
 The satellite-derived free-air gravity data (Figure \ref{fig3}) shows traces of an EW-trending extinct spreading ridge (3°-4°S, 47,0°E-49,5°E), as well as a NS-oriented fracture zones (4°-9°N, 51,0°E-53,5°E) both located within the basin of the Somali Sea segment of the Indian Ocean. In such a way, this map added new information to the previous studied. Based on the 1:1 000 000 Gravity Anomaly Map of Somalia for 2.5D gravity modelling earlier study \cite{Rapollaetal1995} reported that crystalline basement in the southern Somali Sea is transformed to a denser material and is of an oceanic nature.
 
-The sediment thickness (Figure \ref{fig5}) over the Somali Sea has a clearly asymmetric type of distribution with a dominating orientation NE-SW. The highest values of the sediments along the coasts of Tanzania reach up to 5,250 m while the central basin have generally low dominating values <1,000m (dark blue colours in Figure \ref{fig5}). Such a pattern in sediment coverage is also supported by previous studies \cite{AliKassim} where two main earlier sedimentary basins were defined in the southern Somalia, generally trending in NE–SW direction: the Mesozoic-Tertiary Somali coastal basin and the Mesozoic Luuq-Mandera basin. 
+The sediment thickness (Figure \ref{fig5}) over the Somali Sea has a clearly asymmetric type of distribution with a dominating orientation NE-SW. A greater thickness is observed along the coasts of Tanzania (up to 5,250 m), while central basin has lower values <1,000m. The sediment thickness over the Somali Sea has an asymmetric type of distribution oriented in NE–SW. The highest values of the sediments along the coasts of Tanzania reach up to 5,250 m while the central basin have generally low dominating values <1,000m (dark blue colours in Figure \ref{fig5}). Such a pattern in sediment coverage is also supported by previous studies \cite{AliKassim} where two main earlier sedimentary basins were defined in the southern Somalia, generally trending in NE–SW direction: the Mesozoic-Tertiary Somali coastal basin and the Mesozoic Luuq-Mandera basin. 
 
 \begin{wrapfigure}{R}{0.5\textwidth}
 \centering
@@ -194,7 +194,7 @@ Besides a series of the geological and geophysical maps and relevant literature 
 
 \section{Conclusion}
 
-The use of GMT, demonstrated in this paper, proposes smart solutions to geophysical mapping through automated methods of scripting, as a replacement of laborious manual workflow of traditional GIS. The advanced methods of GMT was applied to accurate and aesthetic mapping of the western segment of the Indian Ocean wit ha special focus on geological and geophysical investigation of the Somali Sea and the Seychelles. 
+The use of GMT, demonstrated in this paper, proposes smart solutions to geophysical mapping through automated methods of scripting, as a replacement of laborious manual workflow of traditional GIS. The advanced methods of GMT was applied to accurate and aesthetic mapping of the western segment of the Indian Ocean wit ha special focus on geological and geophysical investigation of the Somali Sea and the Seychelles. In such a way, this paper contributed to the geological studies of the Somali Sea and the Seychelles using advanced mapping approaches.
 
 The advancements in modern cartography largely depend on the use of the cutting edge technologies, such as scripting and machine learning. Geospatial data analysis supported by advanced scripting techniques can ensure smart geophysical mapping and precise data visualisation for a better and more in-depth analysis of the complex submarine regions such as western Indian Ocean. The present paper demonstrated the application of the developed advanced methods of mapping by GMT scripting approach for systematic operative monitoring of marine geophysical phenomena and distribution of major submarine geomorphological landforms in the Seychelles bank using high-resolution spatial data. 
 With this aim, the applied scripting approach and choice of GMT methodology are largely explained by the effectiveness of the machine learning and scripting techniques for automation of mapping workflow using high-resolution data, as a perspective mapping method in marine geophysical studies. 
@@ -217,15 +217,15 @@ Due to the speed and quality of the GMT mapping, the presented data can be filte
 
 Understanding the complexity of the geophysical setting in such a remote area as oceanic seafloor involves a multiplicity of the components that interact in shaping geological and geomorphological setting. Visualising geological, gravity and topographic grids is about integrating multiple layers of geoinformation and data both in raster and vector formats. This means that visualisation of such complex phenomena as the oceanic seafloor and adjacent terrestrial areas with various geomorphological structures are forged through the processing of various datasets that results into a series of thematic maps. 
 
-When dealing with big data covering large geological areas, this necessarily involves data structuring, their organisation into formats, set up of common map projection (that considers the location of the study area to avoid large distortion). Therefore, geological data and geoinformation processed by GMT is seen as a graphical tools for deeper analysis of the geophysical and geological interactions. Processing multi-source geodata is key to correct geological analysis and can be strongly recommended for further use in geological studies.
+When dealing with big data covering large geological areas, this necessarily involves data structuring, their organisation into formats, set up of common map projection (that considers the location of the study area to avoid large distortion). Therefore, geological data and geoinformation processed by GMT is seen as a graphical tools for deeper analysis of the geophysical and geological interactions. Processing multi-source geodata is key to correct geological analysis and can be strongly recommended for further use in geological studies, as has been demonstrated in this study.
 
- \subsection{Acknowledgements}
+ \section{Acknowledgements}
 The author cordially acknowledges the anonymous reviewers for their critical comments and careful review that improved the earlier draft of this manuscript.
     
-\subsection{Conflict of Interest}
+\section{Conflict of Interest}
     The author declares no conflicts of interest.
     
-\subsection{Data Availability Statement}
+\section{Data Availability Statement}
     Yes, the GMT codes are available on the \href{https://github.com/paulinelemenkova/Mapping-Somali-Sea-and-the-Seychelles}{GitHub}
 
 \bibliographystyle{unsrt}
